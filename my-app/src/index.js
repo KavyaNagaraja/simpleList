@@ -2,7 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import reportWebVitals from './reportWebVitals';
+import List from './listtest';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+const items1=["one","two", "three","four"];
+ReactDOM.render(
+  <React.StrictMode>
+      <List items={items1}/>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
